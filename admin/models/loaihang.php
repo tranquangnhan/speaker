@@ -14,11 +14,10 @@
     function addCategories($name,$img,$anhien){
         $sql = "INSERT INTO danhmuc(name,img,anhien) values('{$name}','{$img}','{$anhien}')";
         exec1($sql);
-        echo $sql;
     }
     function updateCategories($id,$name,$img,$anhien){
         $sql = "UPDATE danhmuc SET name='{$name}',img='{$img}',anhien='{$anhien}' WHERE id='{$id}'";
-        execute1($sql);
+        exec1($sql);
     }
     function showDmEdit($id){
         $sql = "select * from danhmuc where id= {$id}";
