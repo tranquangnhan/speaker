@@ -16,6 +16,10 @@ switch ($_GET['act']) {
         $id = $_GET['id'];
         echo json_encode($model->getProduct($id));
         break;
+    case 'search':
+        $key = $_GET['key'];
+        echo json_encode($model->search($key));
+        break;
     default:
         break;
 }

@@ -12,6 +12,10 @@ class Model_home{
         $sql = "SELECT * FROM sanpham WHERE id=?";
         return result1(0,$sql,$id);
     }
+    function search($key){
+        $sql = "SELECT * FROM sanpham WHERE name LIKE '%$key%'";
+        return result1(0,$sql);
+    }
 }
 
 ?>
