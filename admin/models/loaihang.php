@@ -9,15 +9,20 @@
     }
     function xoaDanhMuc($id){
         $sql = "DELETE FROM danhmuc WHERE id=".$id;
-        exec1($sql);
+        return exec1($sql);
     }
     function addCategories($name,$img,$anhien){
         $sql = "INSERT INTO danhmuc(name,img,anhien) values('{$name}','{$img}','{$anhien}')";
-        exec1($sql);
+        return exec1($sql);
     }
     function updateCategories($id,$name,$img,$anhien){
-        $sql = "UPDATE danhmuc SET name='{$name}',img='{$img}',anhien='{$anhien}' WHERE id='{$id}'";
-        exec1($sql);
+        if(!$img){
+            $sql = "UPDATE danhmuc SET name=?,anhien=? WHERE id=?";
+            return exec1($sql,$name,$anhien,$id);
+        }else{
+            $sql = "UPDATE danhmuc SET name=?,img=?,anhien=? WHERE id=?";
+            return exec1($sql,$name,$img,$anhien,$id);
+        } 
     }
     function showDmEdit($id){
         $sql = "select * from danhmuc where id= {$id}";
