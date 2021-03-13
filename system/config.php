@@ -1,8 +1,8 @@
 <?php
-define('HOST_DB','localhost');
-define('NAME_DB','speaker');
-define('USER_DB','root');
-define('PASS_DB','');
+define('HOST_DB','remotemysql.com');
+define('NAME_DB','7zeE9DbecU');
+define('USER_DB','7zeE9DbecU');
+define('PASS_DB','2fIyWXy9QL');
 define('ROOT_URL','');
 define('ADMIN_URL',ROOT_URL.'/admin');
 define('SITE_URL',ROOT_URL.'/site/');
