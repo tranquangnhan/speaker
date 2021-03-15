@@ -20,6 +20,10 @@ switch ($_GET['act']) {
         $key = $_GET['key'];
         echo json_encode($model->search($key));
         break;
+    case 'addview':
+        $id = $_GET['id'];
+        echo json_encode($model->addView($id));
+        break;
     default:
         break;
 }

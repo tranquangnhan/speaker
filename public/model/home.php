@@ -16,6 +16,10 @@ class Model_home{
         $sql = 'SELECT * FROM sanpham WHERE name LIKE "%'.$key.'%"';
         return result1(0,$sql);
     }
+    function addView($id){
+        $sql = "UPDATE sanpham SET luotxem=luotxem+1 WHERE id=?";
+        return exec1($sql,$id);
+    }
 }
 
 ?>
