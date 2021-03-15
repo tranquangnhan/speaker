@@ -13,7 +13,7 @@ class Model_home{
         return result1(0,$sql,$id);
     }
     function search($key){
-        $sql = "SELECT * FROM sanpham WHERE name LIKE '%$key%'";
+        $sql = 'SELECT * FROM sanpham WHERE name LIKE "%'.$key.'%"';
         return result1(0,$sql);
     }
 }

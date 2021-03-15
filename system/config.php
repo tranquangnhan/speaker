@@ -19,4 +19,12 @@ define('BASE_URL','');
 // Server: remotemysql.com
 
 // Port: 3306 
+
+
+// Database:	tytbblab_namspeaker
+// Host:	localhost
+// Username:	tytbblab_nam
+// Password:	Tranquangnhan@1606
+
+
 ?>
